@@ -28,7 +28,7 @@ class TaskTile extends ConsumerWidget {
                 Expanded(
                   child: task.done
                       ? Text('task done')
-                      : Text('elepsed sec.: ${task.elapsedSeconds}'),
+                      : Text('left sec.: ${task.secondsLeft}'),
                 ),
                 task.done
                     ? Icon(Icons.done)
