@@ -4,8 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/work.dart';
 import '../../providers/worksListStateProvider.dart';
 
-
-
 class WorkTile extends ConsumerWidget {
   const WorkTile({Key? key}) : super(key: key);
   @override
@@ -18,14 +16,20 @@ class WorkTile extends ConsumerWidget {
         side: work.isPicked ? BorderSide(width: 3) : BorderSide.none,
       ),
       child: InkWell(
-         onTap: () => context.read(worksListProvider.notifier).togglePick(work),
-                child: Padding(
+        onTap: () => context.read(worksListProvider.notifier).togglePick(work),
+        child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(work.name, style: Theme.of(context).textTheme.headline5,),
-              Text('${work.durationSeconds} sec.', style: Theme.of(context).textTheme.headline5,),
+              Text(
+                work.name,
+                style: Theme.of(context).textTheme.headline5,
+              ),
+              Text(
+                '${work.durationSeconds} sec.',
+                style: Theme.of(context).textTheme.headline5,
+              ),
             ],
           ),
         ),

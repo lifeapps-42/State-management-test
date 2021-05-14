@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../works/works_route.dart';
 import '../../models/task.dart';
+import '../works/works_route.dart';
 import 'tasks_list.dart';
 
 class TasksScaffold extends StatelessWidget {

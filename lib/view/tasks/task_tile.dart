@@ -18,7 +18,10 @@ class TaskTile extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Text('${task.works.length} work(s) in task', style: Theme.of(context).textTheme.headline6,),
+              child: Text(
+                '${task.works.length} work(s) in task',
+                style: Theme.of(context).textTheme.headline6,
+              ),
             ),
             Row(
               children: [

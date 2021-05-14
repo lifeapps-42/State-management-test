@@ -15,7 +15,8 @@ class Task {
   final int elapsedSeconds;
 
   Task(
-    this.id, this.works,
+    this.id,
+    this.works,
   )   : done = false,
         totalSeconds = works.fold<int>(
             0, (previousValue, work) => previousValue + work.durationSeconds),
@@ -30,13 +31,17 @@ class Task {
       required this.id});
 
   Task copyWith(
-      {List<Work>? works, int? totalSeconds, bool? done, int? elapsedSeconds, int? id}) {
+      {List<Work>? works,
+      int? totalSeconds,
+      bool? done,
+      int? elapsedSeconds,
+      int? id}) {
     return Task._(
         works: works ?? this.works,
         done: done ?? this.done,
         totalSeconds: totalSeconds ?? this.totalSeconds,
         elapsedSeconds: elapsedSeconds ?? this.elapsedSeconds,
-        id: id?? this.id);
+        id: id ?? this.id);
   }
 
   Task _toDone() => copyWith(done: true);
@@ -48,9 +53,8 @@ class Task {
     } else {
       print('done');
       ticker.cancel();
-    return _toDone();
+      return _toDone();
     }
-    
   }
 
   double get elepsedDouble => elapsedSeconds / totalSeconds;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../providers/worksListStateProvider.dart';
-import '../../models/work.dart';
 import '../../models/task.dart';
+import '../../models/work.dart';
+import '../../providers/worksListStateProvider.dart';
 import 'works_list.dart';
 
 class WorksScaffold extends StatelessWidget {

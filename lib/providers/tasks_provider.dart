@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/task.dart';
@@ -31,7 +30,9 @@ class TasksStateProvider extends StateNotifier<List<Task>> {
       print('tick');
       state = [
         for (final Task taskFromList in state)
-          taskFromList.id == newTask.id ? taskFromList.tick(timer) : taskFromList
+          taskFromList.id == newTask.id
+              ? taskFromList.tick(timer)
+              : taskFromList
       ];
     });
   }

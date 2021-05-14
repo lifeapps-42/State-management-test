@@ -1,21 +1,19 @@
-import 'dart:async';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/work.dart';
 
 final worksListProvider =
-    StateNotifierProvider<WorksListStateProvider, List<Work>>((ref) => WorksListStateProvider());
+    StateNotifierProvider<WorksListStateProvider, List<Work>>(
+        (ref) => WorksListStateProvider());
 
 final pickedWorksProvider = Provider<List<Work>>((ref) {
-   return ref.watch(worksListProvider).where((work) => work.isPicked).toList();
+  return ref.watch(worksListProvider).where((work) => work.isPicked).toList();
 });
 
 final currentWorkProvider = ScopedProvider<Work>(null);
 
 class WorksListStateProvider extends StateNotifier<List<Work>> {
   WorksListStateProvider([List<Work>? state]) : super(state ?? <Work>[]);
-
 
   void generateList() {
     state = List<Work>.generate(900, (i) => Work(i + 1));
