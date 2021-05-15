@@ -1,16 +1,28 @@
-# casting_form_test
+# State Management Test
+Solution example
 
-A new Flutter project.
+## To run Project
 
-## Getting Started
+- First install Flutter SDK with help of [Google official guide](https://flutter.dev/docs/get-started/install)
 
-This project is a starting point for a Flutter application.
+- If Flutter is already installed, make sure you have the latest version of SDK
+```
+$ flutter upgrade
+```
 
-A few resources to get you started if this is your first Flutter project:
+- Clone this repo
+```
+$ git clone https://github.com/lifeapps-42/State-management-test
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Get dependencies
+```
+$ flutter pub get
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Connect iOS Simulator/Android Emulator or physical device
+
+- Press F5 to run project or:
+```
+$ flutter run
+```
