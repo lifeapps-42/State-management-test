@@ -26,3 +26,5 @@ $ flutter pub get
 ```
 $ flutter run
 ```
+
+- STAR THIS REPO :)
